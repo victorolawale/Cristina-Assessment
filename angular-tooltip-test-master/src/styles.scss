@@ -1,0 +1,100 @@
+/* You can add global styles to this file, and also import other style files */
+$font-family: 'Nunito';
+$color: #eee;
+$btn-warning: #FF7A6E;
+$btn-error: #DD2666;
+$gradient-1-left: #FB846D;
+$gradient-1-right: #FE7466;
+$gradient-2-left: #E52C64;
+$gradient-2-right: #D21065;
+
+body {
+    background: $color;
+    padding: 50px;
+    font-family: $font-family;
+    color: $color;
+}
+
+h4{
+    text-align: center;
+}
+
+.container {
+    max-width: 1400px;
+    margin: 10px auto;
+}
+
+.message-card {
+    padding: 20px;
+    box-sizing: border-box;
+    margin-bottom: 20px;
+    flex-basis: 45%;
+    border-radius: 10px;
+}
+
+.button {
+    cursor: pointer;
+    display: block;
+    border-radius: 2em;
+    padding: 10px 12px;
+    border: 1px solid #ddd;
+    background-image: linear-gradient(#eee, #ddd);
+    font-size: 1em;
+    font-weight: bold;
+    margin: 10px 0;
+    width: 100%;
+}
+
+.button--btnA {
+	color: $btn-error;
+}
+.button--btnB {
+	color: $btn-warning;
+}
+
+@media (min-width: 700px) {
+    .container {
+        display: flex; 
+        justify-content: space-between;
+    }
+}
+
+.message-card:nth-child(1) {background: linear-gradient(to right, $gradient-1-left, $gradient-1-right) }
+.message-card:nth-child(2) {background: linear-gradient(to right, $gradient-2-left, $gradient-2-right) }
+
+// tootltip styling
+
+.tooltip {
+    position: relative;
+}
+
+
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: 120px;
+    background: black;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+    bottom: 150%;
+    left: 50%;
+    margin-left: -60px;
+  }
+  
+  .tooltip .tooltiptext::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: black transparent transparent transparent;
+  }
+  
+  .tooltip:hover .tooltiptext {
+    visibility: visible;
+  }

@@ -1,0 +1,24 @@
+
+<div class="container" (keyup.esc)="onEscPressed()">
+
+	<div class="message-card">
+    <h4>Click button to see Tooltip</h4>
+    <div [class.tooltip]="clickedA" (click)="divAClicked()">    
+    <button class="button button--state-warning">Button A</button>
+    <div *ngIf="clickedA">
+      <span class="tooltiptext">Tooltip text</span>
+    </div>
+    </div>
+	</div>
+
+	<div class="message-card">
+    <h4>Click button to see Tooltip</h4>
+    <div [class.tooltip]="clickedB" (click)="divBClicked()">
+    <button class="button button--state-error">Button B</button>
+    <div *ngIf="clickedB">
+      <span class="tooltiptext">Tooltip text</span>
+    </div>
+    </div>
+	</div>
+
+</div>
